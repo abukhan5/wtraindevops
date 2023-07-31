@@ -1,0 +1,9 @@
+{
+  "id":"com.adobe.training:wetrain.all:slingosgifeature:author.dev:1.0-SNAPSHOT",
+  "configurations":  {
+    "com.day.cq.commons.servlets.RootMappingServlet":    {
+      "rootmapping.target":"/sites.html",
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id":"com.adobe.training:wetrain.all:slingosgifeature:user-aggregated-author.dev:1.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.adobe.training:wetrain.core:1.0-SNAPSHOT",
+      "feature-origins":"com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT",
+      "Bundle-SymbolicName":"wetrain.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~wetrain":    {
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT",
+      "alloworigin":[
+        "http://localhost:3000"
+      ],
+      "allowedpaths":[
+        "/(content|conf)/wetrain.*"
+      ],
+      "supportedheaders":[
+        "Authorization",
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD"
+      ],
+      "alloworiginregexp":[
+      ],
+      ":configurator:feature-origins-supportedmethods":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-alloworigin":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-alloworiginregexp":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-supportedheaders":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-allowedpaths":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ]
+    },
+    "com.adobe.granite.workflow.purge.Scheduler~training":    {
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT",
+      "scheduledpurge.workflowStatus":"COMPLETED",
+      "scheduledpurge.name":"Purge Publish Example workflow",
+      "scheduledpurge.daysold:Integer":0,
+      "scheduledpurge.modelIds":[
+        "/var/workflow/models/publish_example"
+      ],
+      ":configurator:feature-origins-scheduledpurge.workflowStatus":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-scheduledpurge.name":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-scheduledpurge.daysold":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-scheduledpurge.modelIds":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ]
+    },
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~wetrain":    {
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT",
+      "mobile.resourceTypes":[
+        "wetrain/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:feature-origins-mobile.resourceTypes":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-README":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT"
+      ]
+    },
+    "com.day.cq.commons.servlets.RootMappingServlet":    {
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT",
+      "rootmapping.target":"/sites.html",
+      ":configurator:feature-origins-rootmapping.target":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author.dev:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.adobe.training:wetrain.all:slingosgifeature:author.dev:1.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.commons.log.LogManager.factory.config~wetrain":    {
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT",
+      "org.apache.sling.commons.log.names":[
+        "com.adobe.training"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:feature-origins-org.apache.sling.commons.log.names":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.file":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.level":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.additiv":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ]
+    },
+    "com.adobe.cq.wcm.core.components.internal.servlets.TableOfContentsFilter~wetrain":    {
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT",
+      "enabled":"true",
+      ":configurator:feature-origins-enabled":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ]
+    }
+  },
+  "assembled-features:ARTIFACTS|TRANSIENT":[
+    "com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT",
+    "com.adobe.training:wetrain.all:slingosgifeature:author.dev:1.0-SNAPSHOT",
+    "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~wetrain",
+    "create path (sling:OrderedFolder) /content/dam/wetrain",
+    "create path (nt:unstructured) /content/dam/wetrain/jcr:content",
+    "set properties on /content/dam/wetrain/jcr:content",
+    "  set cq:conf{String} to /conf/wetrain",
+    "  set jcr:title{String} to \"We.Train\"",
+    "end"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    {
+      "id":"com.adobe.training:wetrain.ui.config:zip:cp2fm-converted:1.0-SNAPSHOT",
+      "feature-origins":"com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+    },
+    {
+      "id":"com.adobe.training:wetrain.ui.apps:zip:cp2fm-converted:1.0-SNAPSHOT",
+      "feature-origins":"com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+    },
+    {
+      "id":"com.adobe.training:wetrain.all:zip:cp2fm-converted:1.0-SNAPSHOT",
+      "feature-origins":"com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+    }
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.adobe.training.core.filters",
+        "com.adobe.training.core.listeners",
+        "com.adobe.training.core.models",
+        "com.adobe.training.core.schedulers",
+        "com.adobe.training.core.servlets"
+      ],
+      "feature-origins":[
+        "com.adobe.training:wetrain.all:slingosgifeature:1.0-SNAPSHOT"
+      ]
+    }
+  ],
+  "artifact-rules:JSON|false":{
+
+  }
+}

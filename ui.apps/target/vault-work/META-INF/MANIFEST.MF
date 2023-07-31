@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.4
+Build-Jdk-Spec: 17
+Implementation-Title: WKND Sites Project - UI apps
+Implementation-Version: 2.1.5-SNAPSHOT
+Implementation-Vendor: Adobe
+Content-Package-Type: application
+Content-Package-Id: com.adobe.aem.guides:aem-guides-wknd.ui.apps:2.1.5-S
+ NAPSHOT
+Content-Package-Description: UI apps package for WKND Sites Project
+Content-Package-Roots: /apps/msm/wknd_blueprint,/apps/wknd/clientlibs,/a
+ pps/wknd/components,/apps/wknd/i18n
+Import-Package: com.adobe.cq.sightly;version="[3.2.1,4.0.0)",com.adobe.c
+ q.wcm.core.components.models;version="[12.28.0,13.0.0)",com.adobe.train
+ ing.core.models;version="[1.0.0,2.0.0)",org.apache.sling.api;version="[
+ 2.3.4,3.0.0)",org.apache.sling.scripting.sightly;version="[2.0.0,3.0.0)
+ ",org.apache.sling.scripting.sightly.pojo;version="[1.0.1,2.0.0)"
+

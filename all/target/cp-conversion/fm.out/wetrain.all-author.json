@@ -1,0 +1,45 @@
+{
+  "id":"com.adobe.training:wetrain.all:slingosgifeature:author:1.0-SNAPSHOT",
+  "configurations":  {
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~wetrain":    {
+      "alloworigin":[
+        "http://localhost:3000"
+      ],
+      "allowedpaths":[
+        "/(content|conf)/wetrain.*"
+      ],
+      "supportedheaders":[
+        "Authorization",
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD"
+      ],
+      "alloworiginregexp":[
+      ],
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT"
+    },
+    "com.adobe.granite.workflow.purge.Scheduler~training":    {
+      "scheduledpurge.workflowStatus":"COMPLETED",
+      "scheduledpurge.name":"Purge Publish Example workflow",
+      "scheduledpurge.daysold:Integer":0,
+      "scheduledpurge.modelIds":[
+        "/var/workflow/models/publish_example"
+      ],
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT"
+    },
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~wetrain":    {
+      "mobile.resourceTypes":[
+        "wetrain/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:content-package-origins":"com.adobe.training:wetrain.all:1.0-SNAPSHOT|com.adobe.training:wetrain.ui.config:1.0-SNAPSHOT"
+    }
+  }
+}
